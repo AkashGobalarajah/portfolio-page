@@ -76,7 +76,24 @@ li::before {
 .hobbies h2, .volunteer-work h2 {
     color: #6c757d;
 }
+#joke-container {
+    border: 2px solid #007bff;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
 
+#joke-container:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#joke-container p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
 footer {
     text-align: center;
     padding: 1em 0;
