@@ -1,33 +1,22 @@
-
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #f5cfcf;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     padding-left: 10px;
     padding-right: 10px;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Arial', sans-serif;
-    margin-bottom: 0.5em;
-}
-
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header {
     background-color: #333;
     color: #fff;
     padding: 1em 0;
+    width: 100%;
     text-align: center;
 }
 
@@ -42,70 +31,75 @@ header p {
 }
 
 section {
-    padding: 1em;
-    border-bottom: 1px solid #ddd;
+    width: 90%;
+    max-width: 1000px;
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
 }
 
-section h2 {
+.card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+h2 {
     color: #007bff;
     font-size: 1.8em;
+    margin-bottom: 0.75em;
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    position: relative;
+    height: 20px;
+    width: 100%;
+    margin: 10px 0;
 }
 
-li::before {
-    content: '•';
-    color: #007bff;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
+.progress-bar-fill {
+    background-color: #007bff;
+    height: 100%;
+    border-radius: 5px;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
 }
 
-.skills, .languages {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1em;
-}
-
-.hobbies, .volunteer-work {
-    background-color: #e9ecef;
-    color: #333;
-}
-
-.hobbies h2, .volunteer-work h2 {
-    color: #6c757d;
-}
-#joke-container {
-    border: 2px solid #007bff;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-}
-
-#joke-container:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-#joke-container p {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.6;
-}
 footer {
     text-align: center;
     padding: 1em 0;
     background-color: #3b3535;
     color: #fff;
     font-size: 0.8em;
+    width: 100%;
 }
 
 @media only screen and (max-width: 800px) {
-    .skills, .languages {
-        grid-template-columns: 1fr;
+    header h1, header p, section h2 {
+        font-size: smaller;
     }
+
+    .card {
+        padding: 10px;
+    }
+}
+
+#joke-container {
+    background-color: yellow;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
 }

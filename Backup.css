@@ -1,7 +1,8 @@
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
-    background-color: #f5cfcf;
+    background-color: #2517c5;
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -11,7 +12,6 @@ body {
     flex-direction: column;
     align-items: center;
 }
-
 header {
     background-color: #333;
     color: #fff;
@@ -84,6 +84,47 @@ footer {
     width: 100%;
 }
 
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Erzeugt eine flexible Anzahl von Spalten */
+    gap: 10px;
+    padding: 10px;
+}
+
+.skill-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+
+.skill-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+}
+
+.skill-progress-bar-fill {
+    background-color: #007bff;
+    height: 100%;
+    border-radius: 5px;
+    width: 0%; /* Startwert, wird durch individuelle Prozentwerte ersetzt */
+}
+
+/* Anpassungen für kleinere Bildschirme */
+@media only screen and (max-width: 800px) {
+    .skill-card {
+        width: calc(100% - 20px); /* Volle Breite auf kleinen Bildschirmen */
+    }
+}
+
 @media only screen and (max-width: 800px) {
     header h1, header p, section h2 {
         font-size: smaller;
@@ -103,3 +144,10 @@ footer {
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
+
+
+
+/* ... (restlichen CSS-Regeln wie oben) ... */
+
+/* Skills Section Styles */
+
