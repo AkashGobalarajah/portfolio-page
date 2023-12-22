@@ -4,22 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akash Gobalarajah - Portfolio</title>
-    <link rel="stylesheet" href="Backup.css">
-    <!-- CSS and JavaScript links will be added here -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+    
+
 </head>
+
 <body>
-    <div class="sidebar">
-        <a href="#skills">Skills</a>
-        <a href="#languages">Languages</a>
-        <a href="#hobbies">Hobbies</a>
-        <!-- Weitere Links zu anderen Abschnitten Ihrer Webseite -->
-    </div>
-    <div class="main-content">
-    <!-- Header Section -->
+    
     <header>
+    <div class="navbar">
+        <div class="logo"><a href="#"><i class="fa-solid fa-house" style="position: fixed;"></i></a></div>
+            <ul class="links">
+               <li><a href="#education">Education</a></li> 
+               <li><a href="#experience">Professional Experience</a></li> 
+               <li><a href="#skills">Skills</a></li> 
+               <li><a href="#languages">Languages</a></li> 
+               <li><a href="#hobbies">Hobbies</a></li> 
+               <li><a href="#references">References</a></li> 
+               <li><a href="#joke-container">Jokes</a></li> 
+            </ul>
+            <a href="#" class="action_btn">Get started</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"style="position: fixed; padding: auto;"></i>
+
+            </div>
+        </div>
+        <div class="dropdown_menu" "position: fixed; padding: auto;">
+            <li><a href="#education">Education</a></li> 
+               <li><a href="#experience">Professional Experience</a></li> 
+               <li><a href="#skills">Skills</a></li> 
+               <li><a href="#languages">Languages</a></li> 
+               <li><a href="#hobbies">Hobbies</a></li> 
+               <li><a href="#references">References</a></li> 
+               <li><a href="#joke-container">Jokes</a></li>
+               <li><a href="#" class="action_btn">Get started</a></li>
+        </div>
+        <script src="navbar.js"></script>
+       
+    </div>
+    <section id="bio">
+    <div class="card">
         <h1>Akash Gobalarajah</h1>
-        <p>Contact: [Email] | [Phone Number]</p>
-        <p>Professional statement or short bio</p>
+        <p>I'm Akash Gobalarajah, an enthusiastic and dedicated IT professional with a profound focus on integrating business intelligence with technology. As a Business Analyst and Application Manager at Verband öffentlicher Verkehr Bern, I excel in bridging the gap between technical solutions and business needs. My expertise lies in creating effective and user-friendly IT environments, optimizing them for peak performance and accessibility. I bring a global perspective to my work. Outside of my professional life, My career is a testament to my passion for technology and my commitment to leveraging it for enhanced business efficiency and growth.</p>
+    </div>
+    </section>
     </header>
 
     <!-- Education Section -->
@@ -28,9 +59,18 @@
         <div class="card">
             <h3>Bachelor of Science in Business Information Technology</h3>
             <p>Berner Fachhochschule, Bern</p>
-            <p><small>2015 - 2019</small></p>
+            <p><small>2021 - Present</small></p>
         </div>
-        <!-- Weitere Karten für andere Ausbildungen -->
+        <div class="card">
+            <h3>Vocational baccalaureate</h3>
+            <p>GIBB, Bern</p>
+            <p><small>2019 - 2021</small></p>
+        </div>
+        <div class="card">
+            <h3>Apprenticeship as a computer scientist EFZ, Systems Engineering </h3>
+            <p>GIBB, Bern</p>
+            <p><small>2014 - 2018</small></p>
+        </div>
     </section>
 
     <!-- Professional Experience Section -->
@@ -40,7 +80,7 @@
             <h3>Business Analyst and Application Manager</h3>
             <p>Verband öffentlicher Verkehr Bern</p>
             <p><small>Jan 2020 - Present</small></p>
-            <!-- Hier können Sie einen Fortschrittsbalken für die Erfahrungsjahre einfügen -->
+            
         </div>
         <!-- Weitere Karten für andere Erfahrungen -->
     </section>
@@ -49,7 +89,7 @@
 
     <section id="skills">
         <h2>Skills</h2>
-        <div class="languages">
+        <div class="skills">
         <div class="skill-card">
             <div class="skill-title">HTML</div>
             <div class="skill-progress-bar">
@@ -77,41 +117,66 @@
         <h2>Languages</h2>
         <div class="languages">
         <div class="languages-card" >
-        <p>German</p>
-        <p>C2</p>
-    </div>
+            <div class="languages-title">Tamil</div>
+                <p>native language</p>
+        </div>
+        <div class="languages-card" >
+            <div class="languages-title">German</div>
+                <p>C2</p>
+        </div>
+        <div class="languages-card" >
+            <div class="languages-title">English</div>
+                <p>C1</p>
+        </div>
+        <div class="languages-card" >
+            <div class="languages-title">French</div>
+                <p>C2</p>
+        </div>
     </section>
 
     <!-- Hobbies and Volunteer Work Section -->
     <section id="hobbies">
-        <h2>Hobbies and Volunteer Work</h2>
-        <div class="card">
-        <p>Fitness, Basketball, UX testing, IT support at Youth Center</p>
+        <h2>Hobbies</h2>
+        <div class="hobbies">
+        <div class="hobbies-card" >
+            <div class="hobbies-title">Basketball</div>
+        </div>
+        <div class="hobbies-card" >
+            <div class="hobbies-title">Fitness</div>
+        </div>
+        <div class="hobbies-card" >
+            <div class="hobbies-title">Ping-Pong</div>
+        </div>
+        <div class="hobbies-card" >
+            <div class="hobbies-title">grill</div>
+        </div>
+       
     </section>
-
     <!-- References Section -->
     <section id="references">
         <h2>References</h2>
         <div class="card">
         <p>Available upon request</p>
+        </div>
     </section>
 
-    <main>
-        <section id="joke-container">
+    <section id="joke">
+        <div class="card">
+            <h2>Joke-Box</h2>
+        <div id="joke-container">
             <p>Click on me for a joke!</p>
             <!-- Jokes from the API will be displayed here -->
-        </section>
-        <section id="interactive-elements">
-            <!-- Interactive elements with mouse-over effects will go here -->
-        </section>
-    </main>
-
+        </div>
+        </div>
+    </section>
     <!-- Footer -->
     <footer>
         <p>&copy; 2023 Akash Gobalarajah</p>
+        <p>gobalarajah@gmail.com</p>
+        <p>+41 79 211 xx xx]</p>
     </footer>
 
-    <script src="logic.js"></script>
+    
 
 </div>
 </body>

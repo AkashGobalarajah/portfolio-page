@@ -1,23 +1,124 @@
 body {
     font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #f5cfcf;
+    color: #000000;
     line-height: 1.6;
     margin: 0;
     padding: 0;
     padding-left: 10px;
     padding-right: 10px;
+    min-height: 100vh;
+    background-image: url('imgs/background.jpg'); /* Setzen Sie hier den Pfad zu Ihrem Bild */
+    background-size: cover; /* Stellt sicher, dass das Bild den gesamten Hintergrund abdeckt */
+    background-position: center; /* Zentriert das Bild */
+    background-repeat: no-repeat; /* Verhindert das Wiederholen des Bildes */
+    background-attachment: fixed; /* Fixiert das Bild beim Scrollen */
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+a:hover{
+    color: orange;
+}
+.navbar{
+    
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+}
+.right {
+    align-items: right;
+}
+.navbar .logo a{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.navbar .links {
+    
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_btn{
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.action_btn{
+    visibility: hidden;
+    background-color: orange;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    color: white;
+}
+.action_btn:active{
+    scale: 0.95;
+}
+
+.dropdown_menu{
+    position: fixed;
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(red, green, blue, alpha);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+}
+.dropdown_menu.open{
+    position: fixed;
+    height: 240px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+position: fixed;
+width: 100%;
+display: flex;
+justify-content: center;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    color: #020202;
     padding: 1em 0;
     width: 100%;
     text-align: center;
+    position: relative;
 }
 
 header h1 {
@@ -39,13 +140,15 @@ section {
 }
 
 .card {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
+    background-color: empty;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
+    
+    
 }
 
 .card:hover {
@@ -53,7 +156,7 @@ section {
 }
 
 h2 {
-    color: #007bff;
+    color: #000000;
     font-size: 1.8em;
     margin-bottom: 0.75em;
 }
@@ -68,7 +171,7 @@ h2 {
 }
 
 .progress-bar-fill {
-    background-color: #007bff;
+    background-color: #46e5f4;
     height: 100%;
     border-radius: 5px;
     width: 0%;
@@ -84,9 +187,132 @@ footer {
     width: 100%;
 }
 
+.skills {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Erzeugt eine flexible Anzahl von Spalten */
+    gap: 10px;
+    padding: 10px;
+}
+
+.skill-card {
+    background-color: empty;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+.skill-card:hover {
+    transform: translateY(-10px);
+}
+.skill-title {
+    font-size: 0.8em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skill-progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+}
+
+.skill-progress-bar-fill {
+    background-color: #07f3f7;
+    height: 100%;
+    border-radius: 5px;
+    width: 0%; /* Startwert, wird durch individuelle Prozentwerte ersetzt */
+}
+
+.languages {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Erzeugt eine flexible Anzahl von Spalten */
+    gap: 10px;
+    padding: 10px;
+}
+
+.languages-card {
+    background-color: empty;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+.languages-card:hover {
+    transform: translateY(-10px);
+}
+.languages-title {
+    font-size: 0.8em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.languages p {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+.hobbies {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Erzeugt eine flexible Anzahl von Spalten */
+    gap: 10px;
+    padding: 10px;
+}
+
+.hobbies-card {
+    background-color: empty;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hobbies-card:hover {
+    transform: translateY(-10px);
+}
+.hobbies-title {
+    font-size: 0.8em;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.hobbies p {
+    text-align: center;
+    font-size: 0.7em;
+}
+
+
+
+
+
+/* Anpassungen für kleinere Bildschirme */
+@media  (max-width: 800px) {
+    .navbar .links,
+    .navbar .action_btn {
+        display: none;
+    }
+    .navbar .toggle_btn{
+        display: block;
+    }
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .skill-card {
+        width: calc(100% - 20px); /* Volle Breite auf kleinen Bildschirmen */
+    }
+}
+
 @media only screen and (max-width: 800px) {
     header h1, header p, section h2 {
-        font-size: smaller;
+        display: block;;
     }
 
     .card {
@@ -95,11 +321,15 @@ footer {
 }
 
 #joke-container {
-    background-color: yellow;
+    background-color: empty;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 20px;
+    cursor: pointer;
     transition: transform 0.3s ease-in-out;
+}
+.joke-container:hover {
+    transform: translateY(-10px);
 }
