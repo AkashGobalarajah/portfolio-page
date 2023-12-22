@@ -314,29 +314,50 @@ footer {
     transform: translateY(-10px);
 }
 
+
+
 footer {
-    width: 96.5%;
+    max-width: 1200px; /* Maximalbreite */
+    width: 100%; /* Flexibilität */
     display: flex;
-    justify-content: space-between; /* Verteilt den Inhalt gleichmäßig im Footer */
-    align-items: center; /* Zentriert die Inhalte vertikal */
-    padding: 20px;
-    padding-right: 30px;
-    background-color: #333; /* Hintergrundfarbe des Footers */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px; /* Gleichmäßiger Abstand auf allen Seiten */
+    margin: 0 auto; /* Zentriert den Footer im umgebenden Element */
+    background-color: #333;
     color: white;
+    flex-wrap: wrap; /* Ermöglicht das Umfließen auf kleinen Bildschirmen */
+    max-width: 1200px; /* Maximalbreite des Footers, anpassbar nach Bedarf */
+    width: 100%; /* Stellt sicher, dass der Footer die volle Breite einnimmt */
 }
 
 .footer-icons {
-    display: flex; /* Macht die Social-Media-Icons zu einem Flex-Container */
+    display: flex;
 }
 
 .footer-icons a {
     color: white;
-    margin: 0 10px; /* Fügt Abstand zwischen den Icons hinzu */
+    margin: 0 10px;
 }
 
 .footer-icons i {
-    font-size: 24px; /* Passt die Größe der Icons an */
+    font-size: 24px;
 }
+
+/* Responsive Design */
+@media (max-width: 800px) {
+    footer {
+        padding: 20px 10px;
+        flex-direction: column; /* Stapelt die Elemente vertikal */
+        text-align: center;
+    }
+
+    .footer-icons {
+        margin-top: 20px; /* Fügt Abstand oben hinzu, wenn die Icons unter dem Text sind */
+        justify-content: center; /* Zentriert die Icons */
+    }
+}
+
 
 /* Stellen Sie sicher, dass die restlichen Elemente im Footer entsprechend gestyled sind */
 
