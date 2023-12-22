@@ -186,14 +186,7 @@ h2 {
     transition: width 0.5s ease-in-out;
 }
 
-footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #3b3535;
-    color: #fff;
-    font-size: 0.8em;
-    width: 100%;
-}
+
 
 .skills {
     display: grid;
@@ -318,7 +311,6 @@ footer {
 footer {
     
     max-width: 1200px; /* Maximalbreite */
-    width: 90%; /* Flexibilität */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -328,7 +320,7 @@ footer {
     color: white;
     flex-wrap: wrap; /* Ermöglicht das Umfließen auf kleinen Bildschirmen */
     max-width: 1200px; /* Maximalbreite des Footers, anpassbar nach Bedarf */
-    width: 100%; /* Stellt sicher, dass der Footer die volle Breite einnimmt */
+    width: 90%; /* Stellt sicher, dass der Footer die volle Breite einnimmt */
 }
 
 .footer-icons {
@@ -347,7 +339,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 800px) {
     footer {
-        width: 85%;
+        width: 90%;
         flex-direction: column; /* Stapelt die Elemente vertikal */
         text-align: center;
     }
