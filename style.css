@@ -318,7 +318,7 @@ footer {
 footer {
     
     max-width: 1200px; /* Maximalbreite */
-    width: 100%; /* Flexibilität */
+    width: 90%; /* Flexibilität */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -347,7 +347,7 @@ footer {
 /* Responsive Design */
 @media (max-width: 800px) {
     footer {
-        padding: 20px 10px;
+        width: 85%;
         flex-direction: column; /* Stapelt die Elemente vertikal */
         text-align: center;
     }
@@ -387,7 +387,7 @@ footer {
 
 @media only screen and (max-width: 800px) {
     .skill-card {
-        width: calc(100% - 20px); /* Volle Breite auf kleinen Bildschirmen */
+        width: calc(90% - 20px); /* Volle Breite auf kleinen Bildschirmen */
     }
 }
 
