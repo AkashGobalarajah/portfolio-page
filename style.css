@@ -1,11 +1,10 @@
 body {
+    weight: 100%;
     font-family: 'Roboto', sans-serif;
     color: #000000;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    padding-left: 10px;
-    padding-right: 10px;
     min-height: 100vh;
     background-image: url('imgs/background.jpg'); /* Setzen Sie hier den Pfad zu Ihrem Bild */
     background-size: cover; /* Stellt sicher, dass das Bild den gesamten Hintergrund abdeckt */
@@ -154,8 +153,8 @@ section {
     background-color: rgba(137,207,240, 0.25);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
@@ -317,6 +316,7 @@ footer {
 
 
 footer {
+    
     max-width: 1200px; /* Maximalbreite */
     width: 100%; /* Flexibilität */
     display: flex;
@@ -358,8 +358,6 @@ footer {
     }
 }
 
-
-/* Stellen Sie sicher, dass die restlichen Elemente im Footer entsprechend gestyled sind */
 
 
 /* Anpassungen für kleinere Bildschirme */
