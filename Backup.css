@@ -1,19 +1,33 @@
+/* Import Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,800,200);
+
+/* Farbdefinitionen und andere Variablen */
+:root {
+    --menuWidth: 16em;
+    --menuColor: #353441;
+    --menuText: #9DC6D1;
+    --menuItemHeight: 60px;
+    --degActive: 15deg;
+    --degHover: 1deg;
+    --timing: 150ms;
+    --contentBG: #9DC6D1;
+    --bodyBg: #21212D;
+}
 
 body {
     font-family: 'Roboto', sans-serif;
-    color: #333;
-    background-color: #2517c5;
+    color: #000000;
+    background-color: #46e5f4;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex; /* Flex-Container für Sidebar und Hauptinhalt */
+    flex-direction: row; /* Horizontale Anordnung */
+    min-height: 100vh;
 }
+
 header {
-    background-color: #333;
+    background-color: #0faac6;
     color: #fff;
     padding: 1em 0;
     width: 100%;
@@ -39,7 +53,7 @@ section {
 }
 
 .card {
-    background-color: #fff;
+    background-color: #1591a4;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding-left: 10px;
@@ -53,7 +67,7 @@ section {
 }
 
 h2 {
-    color: #007bff;
+    color: #000000;
     font-size: 1.8em;
     margin-bottom: 0.75em;
 }
@@ -68,7 +82,7 @@ h2 {
 }
 
 .progress-bar-fill {
-    background-color: #007bff;
+    background-color: #46e5f4;
     height: 100%;
     border-radius: 5px;
     width: 0%;
@@ -118,6 +132,84 @@ footer {
     width: 0%; /* Startwert, wird durch individuelle Prozentwerte ersetzt */
 }
 
+.languages {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Erzeugt eine flexible Anzahl von Spalten */
+    gap: 10px;
+    padding: 10px;
+}
+
+.languages-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.languages-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+ 
+.sidebar {
+    z-index: 100;
+    position: fixed; /* Fixierte Position */
+    top: 0;
+    left: 0;
+    width: var(--menuWidth);
+    height: 100%;
+    background-color: var(--menuColor);
+    overflow-y: auto; /* Ermöglicht das Scrollen innerhalb der Sidebar */
+    transition: transform var(--timing) ease-out;
+}
+
+.sidebar a {
+    display: block;
+    padding: 0 1em;
+    width: 100%;
+    height: var(--menuItemHeight);
+    color: var(--menuText);
+    line-height: var(--menuItemHeight);
+    background-color: var(--menuColor);
+    text-decoration: none;
+    transition: background-color var(--timing) ease-out;
+}
+
+.sidebar a:hover {
+    background-color: #fff;
+    color: var(--menuColor);
+}
+.sidebar.menu-active {
+    transform: translateX(0); /* Bewegt die Sidebar ins Bild */
+}
+
+.main-content.main-active {
+    margin-left: var(--menuWidth); /* Verschiebt den Hauptinhalt */
+}
+
+/* Hauptinhalt Stile */
+.main-content {
+    margin-left: var(--menuWidth); /* Platz für die Sidebar lassen */
+    flex-grow: 1;
+    background-color: var(--contentBG);
+    padding: 1em;
+    width: calc(100% - var(--menuWidth));
+}
+
+/* Responsive Design für die Sidebar */
+@media (max-width: 800px) {
+    .sidebar {
+        width: 100%; /* Volle Breite auf kleinen Bildschirmen */
+        position: fixed; /* Fixiert am oberen Bildschirmrand */
+    }
+
+    .main-content {
+        margin-left: 0; /* Kein Abstand für die Sidebar auf kleinen Bildschirmen */
+    }
+
+}
+
 /* Anpassungen für kleinere Bildschirme */
 @media only screen and (max-width: 800px) {
     .skill-card {
@@ -136,7 +228,7 @@ footer {
 }
 
 #joke-container {
-    background-color: yellow;
+    background-color: rgb(0, 255, 251);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     padding-left: 10px;
@@ -144,10 +236,3 @@ footer {
     margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
-
-
-
-/* ... (restlichen CSS-Regeln wie oben) ... */
-
-/* Skills Section Styles */
-
