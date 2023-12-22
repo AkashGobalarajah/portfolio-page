@@ -96,7 +96,7 @@ a:hover {
 
 .dropdown_menu.open {
     position: fixed;
-    height: 240px;
+    height: 360px;
 }
 
 .dropdown_menu li {
