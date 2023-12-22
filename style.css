@@ -20,7 +20,7 @@ li{
 
 a{
     text-decoration: none;
-    color: white;
+    color: rgb(184, 99, 50);
     font-size: 1rem;
 }
 
@@ -196,7 +196,7 @@ footer {
 
 .skill-card {
     background-color: empty;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     padding: 10px;
     text-align: left;
@@ -220,7 +220,7 @@ footer {
 }
 
 .skill-progress-bar-fill {
-    background-color: #07f3f7;
+    background-color:rgb(184, 99, 50);
     height: 100%;
     border-radius: 5px;
     width: 0%; /* Startwert, wird durch individuelle Prozentwerte ersetzt */
@@ -323,6 +323,7 @@ footer {
 #joke-container {
     background-color: empty;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-color: #000000 ;
     border-radius: 10px;
     padding-left: 5px;
     padding-right: 5px;
